@@ -52,48 +52,59 @@ def convert():
         msg.showwarning(title="Error", message="Isi semua kolom yang ada")
 
 
-# Button
-color_theme = str("#6C6C6C")
-
-# Variabel Button
+# Button Untuk Open File Video
 button_open_file_mp4 = Button(
     root,
+    text="Browse",
     command=open_file_mp4,
     padx=30,
     pady=7,
     border=2,
     )
-    
+button_open_file_mp4.place(x=565, y=10)
+
+# Button Memilih Folder/Direktori Untuk Menyimpan Hasil File Mp3
 button_open_dir_mp3 = Button(
     root,
+    text="Browse",
     command=open_dir_mp3,
     padx=30,
     pady=7,
     border=2,
     )
+button_open_dir_mp3.place(x=565, y=57)
 
+# Button Untuk Menjalankan Convert Video Ke Audio
 button_convert = Button(
     root,
+    text="CONVERT NOW",
     command=convert,
-    padx=255,
+    padx=190,
     pady=7,
-    border=2,
+    border=5,
     )
+button_convert.place(x=105, y=180)
 
-button_quit = Button(
-    root,
-    command=quit,
-    padx=30,
-    pady=8,
-    border=2,
-    )
-
+# Button Untuk Mengganti Tema
 button_theme=Button(
     root,
-    padx=30,
+    text="Change Theme",
+    padx=8,
+    pady=8,
+    border=3,
+    )
+button_theme.place(x=5, y=257)
+
+# Button Keluar Atau Close Program
+button_quit = Button(
+    root,
+    text="Exit",
+    command=quit,
+    padx=35,
     pady=8,
     border=2,
     )
+button_quit.place(x=580 , y=257)
 
 # Variabel Label
 bg_label = "#d5bb3a"
@@ -146,12 +157,7 @@ entry_name_file = Entry(
     )
 
 
-# Button Position
-button_open_file_mp4.place(x=565, y=10)
-button_open_dir_mp3.place(x=565, y=57)
-button_convert.place(x=180, y=180)
-button_quit.place(x=554 , y=257)
-button_theme.place(x=5, y=257)
+
 
 
 # Entry Position
