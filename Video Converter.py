@@ -1,4 +1,3 @@
-# import tkinter.font as font 
 from tkinter import *
 from moviepy.editor import *
 from tkinter import filedialog
@@ -13,32 +12,24 @@ root.configure(bg="#6C6C6C")
 root.resizable(False, False)
 
 
-#Fungsi command untuk membuka file mp4
+# Fungsi command untuk membuka file mp4
 def open_file_mp4():
-    global isi_mp4
-    global entry_file_mp4
     openfile = filedialog.askopenfilename(
         initialdir="C:/Users/RADEARSR/Videos",
         title='Open File',
         filetypes=(('MP4', '*.*'), ('All Files', '*.*'))
         )
     entry_file_mp4.insert(0, openfile)
-    isi_mp4 = entry_file_mp4.get()
 
 
 # deklarasi Fungsi command untuk menempatkan hasil convert mp4 -> mp3
 def open_dir_mp3():
-    global isi_mp3
-    global entry_file_mp3
     opendir = filedialog.askdirectory(initialdir="C:/Users/RADEARSR/Music")
     entry_file_mp3.insert(0, opendir)
-    isi_mp3 = entry_file_mp3.get()
 
 
 # deklarasi Fungsi command untuk menamai nama file hasil convert mp4 -> mp3
 def convert():
-    global isi_mp4
-    global isi_mp3
     isi_mp3 = entry_file_mp3.get()
     isi_mp4 = entry_file_mp4.get()
     file_name = entry_name_file.get()
@@ -86,7 +77,7 @@ button_convert = Button(
 button_convert.place(x=105, y=180)
 
 # Button Untuk Mengganti Tema
-button_theme=Button(
+button_theme = Button(
     root,
     text="Change Theme",
     padx=8,
@@ -104,7 +95,7 @@ button_quit = Button(
     pady=8,
     border=2,
     )
-button_quit.place(x=580 , y=257)
+button_quit.place(x=580, y=257)
 
 # Variabel Label
 bg_label = "#d5bb3a"
@@ -155,10 +146,6 @@ entry_name_file = Entry(
     fg=font_color,
     font=("Times", "12", "bold")
     )
-
-
-
-
 
 # Entry Position
 entry_file_mp4.place(x=120, y=20)
